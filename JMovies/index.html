@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMovies - Movies & Series</title>
+    <!-- تحميل Bootstrap 4 من شبكة CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- إضافة Font Awesome لأيقونة البحث -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>JMovies</h1>
+        <nav>
+            <a href="#" class="text-white">Home</a>
+            <a href="#" class="text-white">Movies</a>
+            <a href="#" class="text-white">Series</a>
+            <a href="#" class="text-white" data-toggle="modal" data-target="#loginModal">Login</a>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <!-- مربع البحث -->
+        <div class="search-section mb-4">
+            <div class="input-group">
+                <input type="text" id="search-box" class="form-control" placeholder="Search for movies..." />
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" onclick="searchMovies()">
+                        <i class="fas fa-search"></i> <!-- إزالة الإيموجي الزائد هنا -->
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- قائمة التصنيفات -->
+        <div class="category-section mb-4">
+            <select id="category-select" class="form-control">
+                <option value="">Select Category</option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Romance">Romance</option>
+                <option value="Horror">Horror</option>
+            </select>
+        </div>
+
+        <section id="movies">
+            <h2>Featured Movies</h2>
+            <div id="movie-list" class="row">
+                <!-- أفلام ستظهر هنا بواسطة JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal تسجيل الدخول -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 JMovies. All rights reserved.</p>
+    </footer>
+
+    <!-- تحميل مكتبة jQuery و Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
