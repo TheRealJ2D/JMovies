@@ -6,11 +6,14 @@ const categorySelect = document.getElementById("category-select");
 // دالة لعرض الأفلام في الموقع
 async function fetchMovies(query = '', category = '') {
     try {
-        // Ensure that the URL uses HTTPS, and that query and category are properly encoded
-        const url = `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&type=movie&genre=${encodeURIComponent(category)}&apikey=${apiKey}`;
+        // التأكد من أن الرابط يتم بناؤه باستخدام HTTPS وبالقيم الصحيحة
+        const encodedQuery = encodeURIComponent(query); // تشفير الاستعلام
+        const encodedCategory = encodeURIComponent(category); // تشفير الفئة
+
+        const url = `https://www.omdbapi.com/?s=${encodedQuery}&type=movie&genre=${encodedCategory}&apikey=${apiKey}`;
         const response = await fetch(url);
         const data = await response.json();
-        
+
         if (data.Response === "True") {
             displayMovies(data.Search);
         } else {
@@ -20,6 +23,7 @@ async function fetchMovies(query = '', category = '') {
         movieList.innerHTML = `<p>Error fetching data!</p>`;
     }
 }
+
 
 
 // دالة لعرض الأفلام في الصفحة
