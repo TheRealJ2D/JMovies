@@ -7,7 +7,7 @@ const categorySelect = document.getElementById("category-select");
 async function fetchMovies(query = '', category = '') {
     try {
         // بناء الرابط بناءً على المدخلات
-        const url = `http://www.omdbapi.com/?s=${query}&type=movie&genre=${category}&apikey=${apiKey}`;
+        const url = `https://www.omdbapi.com/?s=${query}&type=movie&genre=${category}&apikey=${apiKey}`;
         const response = await fetch(url);
         const data = await response.json();
         if (data.Response === "True") {
