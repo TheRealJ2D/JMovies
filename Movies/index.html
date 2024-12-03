@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahad | Movie & TV Show Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 id="title">Fahad | Movie & TV Show Explorer</h1>
+      <nav>
+        <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
+        <select id="languageSelector" title="Change Language">
+          <option value="en">🇺🇸</option>
+          <option value="ar">🇸🇦</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="search">
+      <input type="text" id="searchInput" placeholder="Search for movies or TV shows...">
+      <select id="typeFilter">
+        <option value="movie">Movies</option>
+        <option value="series">TV Shows</option>
+      </select>
+      <button id="searchButton" title="Search">🔎</button>
+    </section>
+    <section id="results"></section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Fahad | J2D. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

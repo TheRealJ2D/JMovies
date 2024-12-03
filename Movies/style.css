@@ -1,0 +1,230 @@
+/* إعدادات عامة للصفحة */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* إعدادات الوضع الداكن */
+  body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  /* تنسيق الهيدر */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* عنوان الموقع */
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* تنسيق الأزرار */
+  button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* تنسيق زر "Show Description" */
+  button.show-description {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #333;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: auto;
+    white-space: nowrap; /* يمنع النص من الانكسار */
+  }
+  
+  button.show-description:hover {
+    background-color: #555;
+  }
+  
+  /* تنسيق حقل البحث */
+  #searchInput {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  #searchButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #searchButton:hover {
+    background-color: #555;
+  }
+  
+  /* تنسيق الفلاتر */
+  #typeFilter {
+    font-size: 16px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* تنسيق نتائج البحث */
+  #results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .card {
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .card .details {
+    margin-top: 10px;
+  }
+  
+  .card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .card .rating {
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  .card .description {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .card button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #333;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: auto;
+  }
+  
+  .card button:hover {
+    background-color: #555;
+  }
+  
+  /* تنسيق الشريط الجانبي */
+  #sidebar {
+    position: fixed;
+    top: 20%;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 8px;
+  }
+  
+  #sidebar a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #sidebar a:hover {
+    color: #ffcc00;
+  }
+  
+  /* تحسين عناصر الـ Dark Mode */
+  body.dark-mode #sidebar {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* تحسين اللغة والتبديل بين الوضع */
+  #languageSelector {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  /* النصوص داخل الزر عند التبديل بين الوضع الليلي والنهاري */
+  #darkModeToggle {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  #darkModeToggle:hover {
+    background-color: #555;
+  }
+  
+  /* تنسيق الشريط السفلي */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* تحسين مظهر الصفحة عند تحميلها */
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #333;
+  }  
