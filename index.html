@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Your Movie Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MovieFlix</div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#popular">Popular</a>
+                <a href="#top-rated">Top Rated</a>
+                <a href="#upcoming">Upcoming</a>
+            </div>
+            <div class="utility-buttons">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="languageToggle" class="language-toggle" aria-label="Toggle language">
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search movies..." aria-label="Search movies">
+                <button aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to MovieFlix</h1>
+            <p>Discover the latest and greatest movies</p>
+        </section>
+
+        <section class="featured-movies">
+            <div class="section-header">
+                <h2>Featured Movies</h2>
+                <div class="section-nav">
+                    <button class="scroll-btn prev" aria-label="Previous movies">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="scroll-btn next" aria-label="Next movies">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie-grid" id="movieGrid">
+                <!-- Movies will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Movie Details Modal -->
+    <div id="movieModal" class="modal" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"></h2>
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-poster">
+                    <img src="" alt="Movie Poster">
+                </div>
+                <div class="modal-info">
+                    <div class="movie-metadata"></div>
+                    <div class="movie-rating"></div>
+                    <div class="movie-description">
+                        <h3>Overview</h3>
+                        <p class="movie-plot"></p>
+                        <h3>Cast</h3>
+                        <p class="movie-cast"></p>
+                        <h3>Director</h3>
+                        <p class="movie-director"></p>
+                        <h3>Awards</h3>
+                        <p class="movie-awards"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">MovieFlix</div>
+                <p>&copy; 2024 MovieFlix. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <h3>Navigation</h3>
+                    <a href="#">Home</a>
+                    <a href="#popular">Popular</a>
+                    <a href="#top-rated">Top Rated</a>
+                    <a href="#upcoming">Upcoming</a>
+                </div>
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://x.com/FahadxMadrid" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/d4g3/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
